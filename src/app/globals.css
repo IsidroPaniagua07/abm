@@ -2,26 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .page-container {
+    @apply min-h-screen bg-[#D4B5CA] text-gray-800 font-sans;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  .header {
+    @apply bg-pink-200 p-4;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .nav-container {
+    @apply container mx-auto flex justify-between items-center;
+  }
+
+  .logo {
+    @apply text-2xl font-bold text-pink-800;
+  }
+
+  .nav-links {
+    @apply flex space-x-4;
+  }
+
+  .nav-link {
+    @apply hover:text-pink-600;
+  }
+
+  .main-content {
+    @apply container mx-auto mt-8 p-4;
+  }
+
+  .hero-section {
+    @apply text-center mb-12;
+  }
+
+  .hero-title {
+    @apply text-4xl font-bold text-pink-800 mb-4;
+  }
+
+  .hero-subtitle {
+    @apply text-xl;
+  }
+
+  .services-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-8 mb-12;
+  }
+
+  .service-card {
+    @apply p-6 rounded-lg shadow-md;
+    border: 2px solid #333;
+    border-radius: 8px;
+    margin: 20px 0;
+    position: relative;
+  }
+
+  .service-title {
+    @apply text-2xl font-semibold bg-[#D4B5CA] text-pink-700 mb-2;
+    position: absolute;
+    top: -18px;
+    left: 20px;
+    padding: 0px 10px;
+
+    margin: 0;
+  }
+
+  .service-content {
+    padding: 20px;
+  }
+
+  .appointment-section {
+    @apply mb-12;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-pink-800 mb-4 text-center;
+  }
+
+  .price-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+  }
+
+  .price-card {
+    @apply bg-white p-6 rounded-lg shadow-md;
+  }
+
+  .price-category {
+    @apply text-2xl font-semibold text-pink-700 mb-4;
+  }
+
+  .price-list {
+    @apply space-y-4;
+  }
+
+  .price-item {
+    @apply flex justify-between items-center;
+  }
+
+  .price {
+    @apply font-bold;
+  }
+
+  .cta-container {
+    @apply mt-8 text-center;
+  }
+
+  .cta-button {
+    @apply inline-block bg-pink-600 text-white py-2 px-6 rounded-full hover:bg-pink-700 transition duration-300;
+  }
+
+  .footer {
+    @apply bg-pink-200 mt-12 py-6;
+  }
+
+  .footer-content {
+    @apply container mx-auto text-center;
   }
 }

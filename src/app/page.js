@@ -2,99 +2,121 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="page-container">
+      <header className="header">
+        {/* <nav className="nav-container">
+          <h1 className="logo">Magaly's Nails</h1>
+          <ul className="nav-links">
+            <li><a href="#" className="nav-link">Home</a></li>
+            <li><a href="#" className="nav-link">Services</a></li>
+            <li><a href="#" className="nav-link">Gallery</a></li>
+            <li><a href="#" className="nav-link">Contact</a></li>
+          </ul>
+        </nav> */}
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      <main className="main-content">
+        <section className="hero-section">
+          <h2 className="hero-title">Acrylics By Magaly</h2>
+          <p className="hero-subtitle">Experience luxury nail care in a serene environment</p>
+        </section>
+
+        <section className="services-grid">
+          <div className="service-card">
+            <h3 className="service-title">Contact</h3>
+            <div className="service-content">
+              <p>Pamper your hands with our expert manicure services.</p>
+            </div>
+          </div>
+          <div className="service-card">
+            <h3 className="service-title">Hours</h3>
+            <div className="service-content">
+              <p>Treat your feet to a relaxing and rejuvenating pedicure.</p>
+            </div>
+          </div>
+          <div className="service-card">
+            <h3 className="service-title">About Magaly</h3>
+            <div className="service-content">
+              <p>Express yourself with our creative and stunning nail art designs.</p>
+            </div>
+          </div>
+          <div className="service-card">
+            <h3 className="service-title">Gallery</h3>
+            <div className="service-content">
+              <p>Express yourself with our creative and stunning nail art designs.</p>
+            </div>
+          </div>
+          <div className="service-card">
+            <h3 className="service-title">Booking Policy</h3>
+            <div className="service-content">
+              <p>Express yourself with our creative and stunning nail art designs.</p>
+            </div>
+          </div>
+
+        </section>
+
+        <section className="appointment-section">
+          <h2 className="section-title">Book Your Appointment</h2>
+          <div className="price-grid">
+            <div className="price-card">
+              <h3 className="price-category">Full Set</h3>
+              <ul className="price-list">
+                <li className="price-item">
+                  <span>Short Full Set (3 hours)</span>
+                  <span className="price">$50.00</span>
+                </li>
+                <li className="price-item">
+                  <span>Medium Full Set (3 hours 40 minutes)</span>
+                  <span className="price">$60.00</span>
+                </li>
+                <li className="price-item">
+                  <span>Long Full Set (4 hours)</span>
+                  <span className="price">$70.00</span>
+                </li>
+                <li className="price-item">
+                  <span>XL Full Set (4 hours 40 minutes)</span>
+                  <span className="price">$80.00</span>
+                </li>
+              </ul>
+            </div>
+            <div className="price-card">
+              <h3 className="price-category">Fill & Other Services</h3>
+              <ul className="price-list">
+                <li className="price-item">
+                  <span>Short Fill (2 hours)</span>
+                  <span className="price">$40.00</span>
+                </li>
+                <li className="price-item">
+                  <span>Medium Fill (2 hours 40 minutes)</span>
+                  <span className="price">$50.00</span>
+                </li>
+                <li className="price-item">
+                  <span>Long Fill (3 hours 20 minutes)</span>
+                  <span className="price">$60.00</span>
+                </li>
+                <li className="price-item">
+                  <span>X-LONG Fill (3 hours 40 minutes)</span>
+                  <span className="price">$70.00</span>
+                </li>
+                <li className="price-item">
+                  <span>Soak Off (1 hour 30 minutes)</span>
+                  <span className="price">$15.00</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="cta-container">
+            <a href="#" className="cta-button">
+              Schedule Now
+            </a>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="footer">
+        <div className="footer-content">
+          <p>&copy; 2023 Glamour Nails. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );
