@@ -3,41 +3,44 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="page-container">
-      <header className="header">
-        {/* <nav className="nav-container">
-          <h1 className="logo">Magaly's Nails</h1>
-          <ul className="nav-links">
-            <li><a href="#" className="nav-link">Home</a></li>
-            <li><a href="#" className="nav-link">Services</a></li>
-            <li><a href="#" className="nav-link">Gallery</a></li>
-            <li><a href="#" className="nav-link">Contact</a></li>
+      <header className=" border-b border-slate-700 border-blur sticky top-0 z-50 w-full">
+        <nav className="nav-container bg-gradient-to-br from-pink-100 to-pink-200">
+          <ul className="flex flex-row justify-evenly py-2 w-full">
+            <li><a href="#" className="nav-link hover:text-pink-600">Home</a></li>
+            <li><a href="#services" className="nav-link">Services</a></li>
+            <li><a href="#gallery" className="nav-link">Gallery</a></li>
+            <li><a href="#services" className="nav-link">Services</a></li>
           </ul>
-        </nav> */}
+        </nav>
       </header>
 
       <main className="main-content">
-        <section className="hero-section">
-          <h2 className="hero-title">Acrylics By Magaly</h2>
-          <p className="hero-subtitle">Experience luxury nail care in a serene environment</p>
+        <section className="hero-section justify-evenly flex flex-row">
+          <Image src="/images/hero-avatar.jpg" alt="Acrylics By Magaly" className="rounded-full border-2 border-white" width={170} height={170} />
+          <h2 className="hero-title dancing-script text-5xl text-[#A67C00] flex flex-col justify-center items-center text-center">
+            <p>
+              Acrylics
+            </p>
+            <p>
+              By
+            </p>
+            <p>
+              Magaly
+            </p>
+          </h2>
         </section>
 
         <section className="services-grid">
           <div className="service-card">
-            <h3 className="service-title">Contact</h3>
-            <div className="service-content">
-              <p>Pamper your hands with our expert manicure services.</p>
-            </div>
-          </div>
-          <div className="service-card">
             <h3 className="service-title">Hours</h3>
             <div className="service-content">
-              <p>Treat your feet to a relaxing and rejuvenating pedicure.</p>
+              <p>Hours of operation.</p>
             </div>
           </div>
           <div className="service-card">
             <h3 className="service-title">About Magaly</h3>
             <div className="service-content">
-              <p>Express yourself with our creative and stunning nail art designs.</p>
+              <p>MAGA.</p>
             </div>
           </div>
           <div className="service-card">
@@ -55,7 +58,7 @@ export default function Home() {
 
         </section>
 
-        <section className="appointment-section">
+        <section className="appointment-section" id="services">
           <h2 className="section-title">Book Your Appointment</h2>
           <div className="price-grid">
             <div className="price-card">
@@ -113,11 +116,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="footer">
-        <div className="footer-content">
-          <p>&copy; 2023 Glamour Nails. All rights reserved.</p>
-        </div>
-      </footer>
+
     </div>
   );
 }
