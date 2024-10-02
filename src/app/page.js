@@ -17,12 +17,12 @@ export default function Home() {
       <main className="main-content">
         <section className="hero-section justify-evenly flex flex-row">
           <Image src="/images/hero-avatar.jpg" alt="Acrylics By Magaly" className="rounded-full border-2 border-white" width={170} height={170} />
-          <h2 className="hero-title dancing-script text-5xl text-[#A67C00] flex flex-col justify-center items-center text-center">
+          <h2 className="hero-title dancing-script text-5xl flex flex-col justify-center items-center text-center">
             <p>
               Acrylics
             </p>
             <p>
-              By
+              by
             </p>
             <p>
               Magaly

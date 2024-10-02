@@ -7,6 +7,13 @@ html {
   background: #fdcfd4
 }
 
+
+:root {
+  --primary: #FBD6EB;
+  --secondary: #940242;
+  --tertiary: #f15483;
+}
+
 .dancing-script {
   font-family: var(--font-dancing-script);
   font-optical-sizing: auto;
@@ -20,40 +27,25 @@ html {
 
 @layer components {
   .page-container {
-    @apply min-h-screen  text-gray-800 font-sans;
-  }
+    @apply min-h-screen;
+    color: var(--secondary);
+    background: var(--primary);
 
-  .header {
-    @apply bg-pink-200 p-4;
   }
 
   .nav-container {
     @apply container mx-auto flex  items-center;
   }
 
-  .logo {
-    @apply text-2xl font-bold text-pink-800;
-  }
 
 
-  .nav-link {
-    @apply hover:text-pink-600;
-  }
 
   .main-content {
     @apply container mx-auto mt-8 p-4;
   }
 
-  .hero-section {
-    @apply text-center mb-12;
-  }
-
   .hero-title {
-    @apply text-4xl font-bold text-pink-800 mb-4;
-  }
-
-  .hero-subtitle {
-    @apply text-xl;
+    @apply text-4xl font-bold mb-4;
   }
 
   .services-grid {
@@ -61,15 +53,16 @@ html {
   }
 
   .service-card {
-    @apply p-6 rounded-lg shadow-lg;
-    border: 2px solid #A67C00;
+    @apply  rounded-lg shadow-lg;
+    border: 2px solid var(--secondary);
     border-radius: 8px;
     margin: 20px 0;
     position: relative;
   }
 
   .service-title {
-    @apply text-2xl font-semibold bg-[#fdcfd4] text-[#A67C00] mb-2;
+    @apply text-2xl font-semibold mb-2;
+    background-color: var(--primary);
     position: absolute;
     top: -18px;
     left: 20px;
@@ -79,6 +72,7 @@ html {
   }
 
   .service-content {
+    @apply p-6;
     padding: 20px;
   }
 
@@ -87,7 +81,7 @@ html {
   }
 
   .section-title {
-    @apply text-3xl font-bold text-pink-800 mb-4 text-center;
+    @apply text-3xl font-bold  mb-4 text-center;
   }
 
   .price-grid {
@@ -119,7 +113,7 @@ html {
   }
 
   .cta-button {
-    @apply inline-block bg-pink-600 text-white py-2 px-6 rounded-full hover:bg-pink-700 transition duration-300;
+    @apply inline-block bg-pink-600 text-white text-2xl py-2 px-6 rounded-full hover:bg-pink-700 transition duration-300;
   }
 
   .footer {
