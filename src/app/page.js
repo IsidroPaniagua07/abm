@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="page-container">
       <header className=" border-b border-slate-700 border-blur sticky top-0 z-50 w-full">
-        <nav className="nav-container bg-gradient-to-br from-pink-100 to-pink-200">
+        <nav className="nav-container bg-[var(--primary)]">
           <ul className="flex flex-row justify-evenly py-2 w-full">
             <li><a href="#" className="nav-link hover:text-pink-600">Home</a></li>
             <li><a href="#services" className="nav-link">Services</a></li>

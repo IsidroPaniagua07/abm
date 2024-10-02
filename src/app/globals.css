@@ -22,7 +22,10 @@ html {
 }
 
 .border-blur {
-  box-shadow: 5px 0px 3px 0px #000000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateZ(0);
 }
 
 @layer components {
