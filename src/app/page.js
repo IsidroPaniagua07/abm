@@ -1,22 +1,24 @@
 import Image from "next/image";
+import { PiMapPinThin } from "react-icons/pi";
+import { CiInstagram } from "react-icons/ci";
 
 export default function Home() {
   return (
     <div className="page-container">
-      <header className=" border-b border-slate-700 border-blur sticky top-0 z-50 w-full">
+      <header className="border-blur sticky top-0 z-50 w-full">
         <nav className="nav-container bg-[var(--primary)]">
           <ul className="flex flex-row justify-evenly py-2 w-full">
-            <li><a href="#" className="nav-link hover:text-pink-600">Home</a></li>
-            <li><a href="#services" className="nav-link">Services</a></li>
+            <li><a href="#" className="nav-link">About</a></li>
             <li><a href="#gallery" className="nav-link">Gallery</a></li>
             <li><a href="#services" className="nav-link">Services</a></li>
+            <li><a href="#schedule" className="nav-link">Book Now</a></li>
           </ul>
         </nav>
       </header>
 
       <main className="main-content">
         <section className="hero-section justify-evenly flex flex-row">
-          <Image src="/images/hero-avatar.jpg" alt="Acrylics By Magaly" className="rounded-full border-2 border-white" width={170} height={170} />
+          <Image src="/images/hero-avatar.jpg" alt="Acrylics By Magaly" className="rounded-full border-2 border-[var(--secondary)]" width={170} height={170} />
           <h2 className="hero-title dancing-script text-5xl flex flex-col justify-center items-center text-center">
             <p>
               Acrylics
@@ -28,6 +30,20 @@ export default function Home() {
               Magaly
             </p>
           </h2>
+        </section>
+        <section className="my-4 gap-4 flex justify-evenly">
+          <div className="flex flex-row items-end gap-1">
+            <PiMapPinThin className="text-[var(--secondary)] text-3xl" />
+            <span className="text-xl font-serif">
+              El Cajon, CA
+            </span>
+          </div>
+          <a href="https://www.instagram.com/acrylicsbymagaly" target="_blank" rel="noopener noreferrer" className="flex flex-row items-end gap-1 cursor-pointer">
+            <CiInstagram className="text-[var(--secondary)] text-3xl" />
+            <span className="text-lg font-serif">
+              Acrylicsbymagaly
+            </span>
+          </a>
         </section>
 
         <section className="services-grid">
@@ -45,7 +61,7 @@ export default function Home() {
           </div>
           <div className="service-card">
             <h3 className="service-title">Gallery</h3>
-            <div className="service-content">
+            <div className="service-content" id="gallery">
               <p>Express yourself with our creative and stunning nail art designs.</p>
             </div>
           </div>
@@ -109,7 +125,7 @@ export default function Home() {
             </div>
           </div>
           <div className="cta-container">
-            <a href="#" className="cta-button">
+            <a href="" id="schedule" className="cta-button">
               Schedule Now
             </a>
           </div>
