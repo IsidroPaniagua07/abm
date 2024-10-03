@@ -67,33 +67,58 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="services-grid">
-          <div className="service-card">
-            <h3 className="service-title">Hours</h3>
-            <div className="service-content flex justify-evenly text-center font-sans font-bold">
+        <section className="sections-grid">
+          <div className="section-card">
+            <h3 className="section-title">Hours</h3>
+            <div className="section-content flex justify-evenly text-center font-sans">
               <div>
-                <p>Mon - Fri</p>
+                <b>Mon - Fri</b>
                 <p>10AM - 7PM</p>
               </div>
               <div>
-                <p>Sat - Sun</p>
+                <b>Sat - Sun</b>
                 <p>10AM - 5PM</p>
               </div>
             </div>
           </div>
           <Gallery />
 
-          <div className="service-card">
-            <h3 className="service-title">Booking Policy</h3>
-            <div className="service-content">
-              <p>Express yourself with our creative and stunning nail art designs.</p>
+          <div className="section-card">
+            <h3 className="section-title">Booking Policy</h3>
+            <div className="section-content">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center ">
+                  <h4 className="font-bold">Guests</h4>
+                  <p className="text-sm">
+                    Extra guests are not allowed at this time, unless they are being serviced or require adult supervision.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <h4 className="font-bold">Cancellations</h4>
+                  <p className="text-sm">
+                    You may cancel or reschedule 48 hours before your appointment date.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <h4 className="font-bold">Deposits</h4>
+                  <p className="text-sm">
+                    New clients must send a $10 deposit via Venmo or Zelle to secure their appointment.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <h4 className="font-bold">Late Policy</h4>
+                  <p className="text-sm">
+                    After a 15 minute grace period, a late fee of $10 will be applied to your total.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
         </section>
 
         <section className="appointment-section" id="services">
-          <h2 className="section-title">Book Your Appointment</h2>
+          <h2 className="price-title">Book Your Appointment</h2>
           <div className="price-grid">
             <div className="price-card">
               <h3 className="price-category">Full Set</h3>
