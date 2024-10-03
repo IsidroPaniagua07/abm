@@ -52,7 +52,7 @@ html {
   }
 
   .services-grid {
-    @apply grid grid-cols-1 md:grid-cols-3 gap-8 mb-12;
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6 mb-8;
   }
 
   .service-card {
@@ -64,7 +64,7 @@ html {
   }
 
   .service-title {
-    @apply text-2xl font-semibold mb-2;
+    @apply text-xl mb-2 font-sans;
     background-color: var(--primary);
     position: absolute;
     top: -18px;
@@ -75,12 +75,12 @@ html {
   }
 
   .service-content {
-    @apply p-6;
+    @apply p-6 font-serif;
     padding: 20px;
   }
 
   .appointment-section {
-    @apply mb-12;
+    @apply mb-12 font-serif;
   }
 
   .section-title {
