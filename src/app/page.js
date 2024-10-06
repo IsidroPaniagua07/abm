@@ -105,7 +105,7 @@ export default function Home() {
             <div className="flex flex-row items-end gap-1">
               <FaPhoneAlt  className="text-[var(--secondary)] text-[28px] pl-[4px] mr-[8px]" />
               <span className="text-lg font-serif">
-                (619)389-9702
+                (619) 389-9702
               </span>
             </div>
             <div className="flex flex-row items-end gap-1">
