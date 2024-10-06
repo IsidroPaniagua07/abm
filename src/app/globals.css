@@ -62,7 +62,7 @@ html {
   }
 
   .section-card {
-    @apply  rounded-lg shadow-lg;
+    @apply  rounded-lg shadow-lg flex flex-col justify-center items-center;
     border: 2px solid var(--accent);
     border-radius: 8px;
     margin: 20px 0;

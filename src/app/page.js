@@ -50,27 +50,11 @@ export default function Home() {
           </a>
           </div>
         </section>
-        <section className="my-4 gap-4 flex justify-evenly">
-          <div className="flex flex-row items-end gap-1">
-            <FaPhoneAlt  className="text-[var(--secondary)] text-xl" />
-            <span className="text-lg font-serif">
-              (619)389-9702
-            </span>
-          </div>
-          <div className="flex flex-row items-end gap-1">
-          <a href="https://www.instagram.com/acrylicsbymagaly" target="_blank" rel="noopener noreferrer" className="flex flex-row items-end gap-1 cursor-pointer">
-            <CiMail  className="text-[var(--secondary)] text-3xl" />
-            <span className="text-lg font-serif">
-              Acrylicsbymagaly
-            </span>
-          </a>
-          </div>
-        </section>
 
         <section className="sections-grid">
           <div className="section-card">
             <h3 className="section-title">Hours</h3>
-            <div className="section-content flex justify-evenly text-center font-sans">
+            <div className="section-content flex justify-evenly text-center font-sans w-full">
               <div>
                 <b>Mon - Fri</b>
                 <p>10AM - 7PM</p>
@@ -113,6 +97,23 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="section-card">
+          <h3 className="section-title">Contact</h3>
+          <div className="section-content flex flex-col items-start gap-4">
+            <div className="flex flex-row items-end gap-1">
+              <FaPhoneAlt  className="text-[var(--secondary)] text-[28px] pl-[4px] mr-[8px]" />
+              <span className="text-lg font-serif">
+                (619)389-9702
+              </span>
+            </div>
+            <div className="flex flex-row items-end gap-1">
+              <CiMail  className="text-[var(--secondary)] text-3xl mr-[8px]" />
+              <span className="text-lg  font-serif">
+                cynthiafiscal9@gmail.com
+              </span>
+            </div>
             </div>
           </div>
 
@@ -174,6 +175,7 @@ export default function Home() {
             </a>
           </div>
         </section>
+
       </main>
 
 
