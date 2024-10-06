@@ -9,9 +9,12 @@ html {
 
 
 :root {
-  --primary: #FBD6EB;
-  --secondary: #940242;
   --tertiary: #f15483;
+  --primary: #DBA2B6;
+  --secondary: #E9C7D3;
+  --accent: #E9C7E4;
+  --asdf: #940242;
+  --asd: #E9CCC7;
 }
 
 .dancing-script {
@@ -33,14 +36,17 @@ html {
     @apply min-h-screen;
     color: var(--secondary);
     background: var(--primary);
-
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
   }
 
   .nav-container {
     @apply container mx-auto flex  items-center text-xl;
   }
 
-
+  .hero-avatar {
+    @apply rounded-full border-2;
+    border-color: var(--accent);
+  }
 
 
   .main-content {
@@ -57,7 +63,7 @@ html {
 
   .section-card {
     @apply  rounded-lg shadow-lg;
-    border: 2px solid var(--secondary);
+    border: 2px solid var(--accent);
     border-radius: 8px;
     margin: 20px 0;
     position: relative;
@@ -94,20 +100,22 @@ html {
     @apply mb-12 font-serif;
   }
 
-  /* . {
+  .price-title {
     @apply text-3xl font-bold  mb-4 text-center;
-  } */
+  }
 
   .price-grid {
     @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
   }
 
   .price-card {
-    @apply bg-white p-6 rounded-lg shadow-md;
+    @apply bg-white p-6 rounded-md shadow-md;
   }
 
   .price-category {
-    @apply text-2xl font-semibold text-pink-700 mb-4;
+    @apply text-2xl font-semibold mb-4;
+    color: var(--tertiary);
   }
 
   .price-list {
