@@ -35,7 +35,7 @@ export default function Gallery() {
             ))}
           </div>
         </div>
-      <h3 className="section-footer">See More on Instagram</h3>
+      <h3 className="section-footer font-bold">See More on Instagram</h3>
       </div>
 
       {modalImage && (

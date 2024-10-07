@@ -5,16 +5,18 @@
 html {
   scroll-behavior: smooth;
   background: var(--primary);
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 1));
 }
 
 
 :root {
   --tertiary: #f15483;
-  --primary: #DBA2B6;
+  --primary: rgb(219, 162, 182);
   --secondary: #E9C7D3;
   --accent: #E9C7E4;
   --asdf: #940242;
   --asd: #E9CCC7;
+
 }
 
 .dancing-script {
@@ -31,21 +33,34 @@ html {
   transform: translateZ(0);
 }
 
+.react-icons {
+  @apply text-[var(--primary)] text-3xl rounded-full;
+
+  filter: drop-shadow(1px 1px .6px rgba(0, 0, 0, .8))
+  ;}
+
 @layer components {
   .page-container {
     @apply min-h-screen;
     color: var(--secondary);
-    background: var(--primary);
+    background-image: url('/images/maga-bg.jpg');
+    /* background-size: cover; */
+    background-position: center;
+    /* background: var(--primary); */
     text-shadow: 1px 1px 3px rgb(0, 0, 0);
   }
+
 
   .nav-container {
     @apply container mx-auto flex  items-center text-xl;
   }
 
+
+
+
   .hero-avatar {
-    @apply rounded-full border-2;
-    border-color: var(--accent);
+    @apply rounded-full;
+    filter: drop-shadow(0px 0px 1px rgba(9,0,0,0.7));
   }
 
 
@@ -62,23 +77,29 @@ html {
   }
 
   .section-card {
-    @apply  rounded-lg shadow-lg flex flex-col justify-center items-center;
-    border: 2px solid var(--accent);
+    @apply rounded-lg shadow-lg flex flex-col justify-center items-center;
+    border: 1px solid rgba(0,0,0, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 8px;
     margin: 20px 0;
     position: relative;
+    padding-top: 10px;
   }
 
   .section-title {
-    @apply text-xl mb-2 font-sans;
-    background-color: var(--primary);
+    @apply text-xl font-sans font-bold;
     position: absolute;
-    top: -18px;
-    left: 20px;
-    padding: 0px 10px;
-
-    margin: 0;
+    top: -0.75rem; /* Adjust to overlap the border */
+    left: 1rem;
+    padding: 0 0.5rem;
+    background-color: var(--primary);
+    color: white; /* Use the secondary color for text */
+    border: 1px solid rgba(0,0,0, 0.4); /* Match the card border */
+    border-radius: 4px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
   }
+
   .section-footer {
     @apply text-sm mb-2 font-sans ;
     /* background-color: var(--primary); */
