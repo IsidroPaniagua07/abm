@@ -65,7 +65,7 @@ html {
 
 
   .main-content {
-    @apply container mx-auto mt-8 p-4;
+    @apply container mx-auto p-4;
   }
 
   .hero-title {
@@ -131,7 +131,7 @@ html {
   }
 
   .price-card {
-    @apply bg-white p-6 rounded-md shadow-md;
+    @apply  p-6;
   }
 
   .price-category {

@@ -8,7 +8,7 @@ import Gallery from "../components/Gallery";
 export default function Home() {
   return (
     <div className="page-container">
-      <header className="border-blur sticky top-0 z-50 w-full">
+      {/* <header className="border-blur sticky top-0 z-50 w-full">
         <nav className="nav-container">
           <ul className="flex flex-row justify-evenly py-2 w-full">
             <li><a href="#">About</a></li>
@@ -17,7 +17,7 @@ export default function Home() {
             <li><a href="#schedule">Book Now</a></li>
           </ul>
         </nav>
-      </header>
+      </header> */}
 
       <main className="main-content">
         <section className="hero-section justify-evenly flex flex-row">
@@ -121,11 +121,62 @@ export default function Home() {
 
         </section>
 
-        <section className="appointment-section" id="services">
-          <div className="cta-container">
-            <a href="" id="schedule" className="cta-button">
-              Schedule Now
-            </a>
+        <section className="section-card" id="services">
+          <h2 className="section-title">Book Your Appointment</h2>
+          <div className="section-content">
+            <div className="price-grid">
+              <div className="price-card">
+                <h3 className="price-category">Full Set</h3>
+                <ul className="price-list">
+                  <li className="price-item">
+                    <span>Short Full Set (3 hours)</span>
+                    <span className="price">$50.00</span>
+                  </li>
+                  <li className="price-item">
+                    <span>Medium Full Set (3 hours 40 minutes)</span>
+                    <span className="price">$60.00</span>
+                  </li>
+                  <li className="price-item">
+                    <span>Long Full Set (4 hours)</span>
+                    <span className="price">$70.00</span>
+                  </li>
+                  <li className="price-item">
+                    <span>XL Full Set (4 hours 40 minutes)</span>
+                    <span className="price">$80.00</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="price-card">
+                <h3 className="price-category">Fill & Other Services</h3>
+                <ul className="price-list">
+                  <li className="price-item">
+                    <span>Short Fill (2 hours)</span>
+                    <span className="price">$40.00</span>
+                  </li>
+                  <li className="price-item">
+                    <span>Medium Fill (2 hours 40 minutes)</span>
+                    <span className="price">$50.00</span>
+                  </li>
+                  <li className="price-item">
+                    <span>Long Fill (3 hours 20 minutes)</span>
+                    <span className="price">$60.00</span>
+                  </li>
+                  <li className="price-item">
+                    <span>X-LONG Fill (3 hours 40 minutes)</span>
+                    <span className="price">$70.00</span>
+                  </li>
+                  <li className="price-item">
+                    <span>Soak Off (1 hour 30 minutes)</span>
+                    <span className="price">$15.00</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="cta-container">
+              <a href="" id="schedule" className="cta-button">
+                Schedule Now
+              </a>
+            </div>
           </div>
         </section>
       </main>
