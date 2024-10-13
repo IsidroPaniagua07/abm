@@ -5,6 +5,9 @@
 html {
   scroll-behavior: smooth;
   background: var(--primary);
+  background-image: url('/new-bg.svg');
+  background-size: cover;
+  background-position: center;
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 1));
 }
 
@@ -43,7 +46,6 @@ html {
   .page-container {
     @apply min-h-screen;
     color: var(--secondary);
-    background-image: url('/images/maga-bg.jpg');
     /* background-size: cover; */
     background-position: center;
     /* background: var(--primary); */
@@ -80,7 +82,7 @@ html {
     @apply rounded-lg shadow-lg flex flex-col justify-center items-center;
     border: 1px solid rgba(0,0,0, 0.4);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.4);
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
     margin: 20px 0;
     position: relative;
@@ -131,7 +133,7 @@ html {
   }
 
   .price-card {
-    @apply  p-6;
+    @apply  py-6 px-2;
   }
 
   .price-category {
@@ -141,18 +143,31 @@ html {
 
   .price-list {
     @apply space-y-4;
+    transition: all 0.3s ease;
+  }
+
+  .single-item-view .price-item-container:not(.expanded) {
+    display: none;
   }
 
   .price-item {
-    @apply flex justify-between items-center;
+    @apply flex flex-col justify-between items-center gap-2 hover:bg-pink-200;
   }
 
   .price {
     @apply font-bold;
   }
 
+  .details-container {
+    @apply flex flex-row justify-between items-center gap-2 w-full;
+  }
+
+  .description-container {
+    @apply flex flex-col justify-between items-center gap-2 w-full;
+  }
+
   .cta-container {
-    @apply mt-8 text-center;
+    @apply mt-4 mb-8 text-center;
   }
 
   .cta-button {

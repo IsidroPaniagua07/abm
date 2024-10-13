@@ -4,21 +4,19 @@ import { CiInstagram } from "react-icons/ci";
 import { FaPhoneAlt } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import Gallery from "../components/Gallery";
+import Link from 'next/link';
+import React from 'react';
+import PriceList from '../components/PriceList';
 
 export default function Home() {
+  const priceItems = [
+    { title: 'Basic Plan', price: '$9.99/mo', description: 'Essential features for individuals' },
+    { title: 'Pro Plan', price: '$19.99/mo', description: 'Advanced features for professionals' },
+    { title: 'Enterprise Plan', price: '$49.99/mo', description: 'Full suite for large organizations' },
+  ];
+
   return (
     <div className="page-container">
-      {/* <header className="border-blur sticky top-0 z-50 w-full">
-        <nav className="nav-container">
-          <ul className="flex flex-row justify-evenly py-2 w-full">
-            <li><a href="#">About</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#schedule">Book Now</a></li>
-          </ul>
-        </nav>
-      </header> */}
-
       <main className="main-content">
         <section className="hero-section justify-evenly flex flex-row">
           <Image src="/images/hero-avatar.jpg" alt="Acrylics By Magaly" className="hero-avatar " width={170} height={170} />
@@ -121,64 +119,13 @@ export default function Home() {
 
         </section>
 
-        <section className="section-card" id="services">
-          <h2 className="section-title">Book Your Appointment</h2>
-          <div className="section-content">
-            <div className="price-grid">
-              <div className="price-card">
-                <h3 className="price-category">Full Set</h3>
-                <ul className="price-list">
-                  <li className="price-item">
-                    <span>Short Full Set (3 hours)</span>
-                    <span className="price">$50.00</span>
-                  </li>
-                  <li className="price-item">
-                    <span>Medium Full Set (3 hours 40 minutes)</span>
-                    <span className="price">$60.00</span>
-                  </li>
-                  <li className="price-item">
-                    <span>Long Full Set (4 hours)</span>
-                    <span className="price">$70.00</span>
-                  </li>
-                  <li className="price-item">
-                    <span>XL Full Set (4 hours 40 minutes)</span>
-                    <span className="price">$80.00</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="price-card">
-                <h3 className="price-category">Fill & Other Services</h3>
-                <ul className="price-list">
-                  <li className="price-item">
-                    <span>Short Fill (2 hours)</span>
-                    <span className="price">$40.00</span>
-                  </li>
-                  <li className="price-item">
-                    <span>Medium Fill (2 hours 40 minutes)</span>
-                    <span className="price">$50.00</span>
-                  </li>
-                  <li className="price-item">
-                    <span>Long Fill (3 hours 20 minutes)</span>
-                    <span className="price">$60.00</span>
-                  </li>
-                  <li className="price-item">
-                    <span>X-LONG Fill (3 hours 40 minutes)</span>
-                    <span className="price">$70.00</span>
-                  </li>
-                  <li className="price-item">
-                    <span>Soak Off (1 hour 30 minutes)</span>
-                    <span className="price">$15.00</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="cta-container">
-              <a href="" id="schedule" className="cta-button">
-                Schedule Now
-              </a>
-            </div>
+   
+          <div className="cta-container">
+            <Link href="/schedule" className="cta-button">
+              Schedule Now
+            </Link>
           </div>
-        </section>
+
       </main>
     </div>
   );

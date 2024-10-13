@@ -1,0 +1,48 @@
+.priceGrid {
+  display: flex;
+  flex-direction: column;
+}
+
+.priceList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.priceItem {
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: 1000px; /* Ensure this is greater than the content height */
+  opacity: 1;
+}
+
+.collapsed {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.selected {
+  max-height: 1000px; /* Ensure this is greater than the content height */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.transitioning {
+  /* Optional: Add any styles you want during the transition */
+}
+
+/* New Styles for Header Transition */
+.price-category {
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  max-height: 1000px;
+  opacity: 1;
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+.headerHidden {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-bottom: 0;
+}
