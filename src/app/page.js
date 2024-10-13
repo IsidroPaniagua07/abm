@@ -32,7 +32,7 @@ export default function Home() {
             </p>
           </h2>
         </section>
-        <section className="my-4 gap-4 flex justify-evenly">
+        <section className="my-4 gap-4 flex justify-evenly icons-container">
           <div className="flex flex-row items-end gap-1">
             <PiMapPinFill  className="react-icons" />
             <span className="text-xl font-serif">
@@ -69,7 +69,7 @@ export default function Home() {
 
           <div className="section-card">
             <h3 className="section-title">Booking Policy</h3>
-            <div className="section-content font-bold">
+            <div className="section-content font-bold font-sans">
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
                   <h4 className="">Guests</h4>
@@ -99,18 +99,18 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="section-card">
+          <div className="contact-card">
           <h3 className="section-title">Contact</h3>
           <div className="section-content flex flex-col items-start gap-4">
             <div className="flex flex-row items-end gap-1">
               <FaPhoneAlt  className="text-[28px] pl-[4px] mr-[8px] react-icons" />
-              <span className="text-lg font-serif filter-shadow">
+              <span className="text-xl font-serif filter-shadow">
                 (619) 389-9702
               </span>
             </div>
             <div className="flex flex-row items-end gap-1">
               <CiMail  className="text-3xl mr-[8px] react-icons" />
-              <span className="text-lg font-serif filter-shadow">
+              <span className="text-xl font-serif filter-shadow">
                 cynthiafiscal9@gmail.com
               </span>
             </div>
@@ -119,7 +119,7 @@ export default function Home() {
 
         </section>
 
-   
+
           <div className="cta-container">
             <Link href="/schedule" className="cta-button">
               Schedule Now

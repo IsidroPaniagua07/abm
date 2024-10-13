@@ -49,7 +49,6 @@ html {
     /* background-size: cover; */
     background-position: center;
     /* background: var(--primary); */
-    text-shadow: 1px 1px 3px rgb(0, 0, 0);
   }
 
 
@@ -72,12 +71,19 @@ html {
 
   .hero-title {
     @apply text-4xl font-bold mb-4;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+
   }
 
   .sections-grid {
     @apply grid grid-cols-1 md:grid-cols-3 gap-6 mb-8;
   }
 
+  .grid h4 {
+    font-weight: 900;
+    font-size: 1.2rem;
+    padding-bottom: .5rem;
+  }
   .section-card {
     @apply rounded-lg shadow-lg flex flex-col justify-center items-center;
     border: 1px solid rgba(0,0,0, 0.4);
@@ -87,6 +93,29 @@ html {
     margin: 20px 0;
     position: relative;
     padding-top: 10px;
+  }
+  .contact-card {
+    @apply rounded-lg shadow-lg flex flex-col justify-center items-center;
+    border: 1px solid rgba(0,0,0, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin: 20px 0;
+    position: relative;
+    padding-top: 10px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+  }
+  .section-card * {
+    /* Apply text outline to all text elements inside .section-card */
+    text-shadow:
+      -1px -1px 0 #000,
+       1px -1px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000;
+  }
+  .icons-container {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+
   }
 
   .section-title {
