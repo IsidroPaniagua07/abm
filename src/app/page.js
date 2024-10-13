@@ -6,7 +6,6 @@ import { CiMail } from "react-icons/ci";
 import Gallery from "../components/Gallery";
 import Link from 'next/link';
 import React from 'react';
-import PriceList from '../components/PriceList';
 
 export default function Home() {
   const priceItems = [
